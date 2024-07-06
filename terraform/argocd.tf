@@ -2,7 +2,7 @@ resource "null_resource" "eks_setup" {
 
   provisioner "local-exec" {
     command = "aws eks --region us-east-1 update-kubeconfig --name ${module.eks.cluster_name}"
-    interpreter = ["PowerShell", "-Command"]
+    interpreter = ["/bin/bash", "-c"]
   }
 
   depends_on = [ module.eks ]
