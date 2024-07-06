@@ -12,7 +12,7 @@ env:
 
 jobs:
   docker:
-    runs-on: [self-hosted]
+    runs-on: [self-hosted-2]
     steps:
       -
         name: Checkout
